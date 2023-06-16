@@ -6,10 +6,10 @@ var jwt = require('jsonwebtoken');
 class TokenService {
     generateTokens(payload: any) {
         const accessToken = jwt.sign(payload, process.env.JWT_ACCESS_SECRET, {
-            expiresIn: '20s'
+            expiresIn: '10m'
         })
         const refreshToken = jwt.sign(payload, process.env.JWT_REFRESH_SECRET, {
-            expiresIn: '30s'
+            expiresIn: '3d'
         })
         return {
             accessToken,
