@@ -33,22 +33,7 @@ const start = async () => {
     try {
 
         await sequelize.authenticate();
-        addRelations()
-        // console.log('Connection has been established successfully.');
-
-        // const user: any = await User.findAll({
-        //     include: [
-        //         {
-        //             as: 'token',
-        //             model: Token
-        //         }
-        //     ]
-        // }
-        // )
-        // console.log('USERRRRRR', user);
-        // console.log('USERRRRRR TOKEN', user[0].token);
-
-
+        addRelations();
         app.listen(PORT, () => {
             console.log(`Server started on port = ${PORT}`);
         })

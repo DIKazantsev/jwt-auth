@@ -86,8 +86,6 @@ class UserService {
             throw ApiError.UnauthorizedError();
         }
 
-        console.log('USERDATA', userData);
-
 
         const user: any = await User.findOne({
             where: {
